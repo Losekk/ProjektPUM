@@ -17,7 +17,7 @@ namespace ProjectPUM
         {
             
         }
-
+        
         protected void Login_bt_Click(object sender, EventArgs e)
         {
             string connectionString = @"Data Source=LUX-TORPEDA\SQLEXPRESS; Initial Catalog=MedBay; Integrated Security=True;";
@@ -31,7 +31,6 @@ namespace ProjectPUM
             if (count == 1)
             {
                 Response.Redirect("Register.aspx");
-
             }
             else
             {
@@ -41,4 +40,5 @@ namespace ProjectPUM
             connection.Close();
         }
     }
+            
 }
