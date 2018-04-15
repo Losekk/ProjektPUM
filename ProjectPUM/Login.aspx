@@ -16,6 +16,7 @@
            </div>
         <div>
 			<div style="position: absolute; z-index: 1" id="layer2" ><div class="modal-body" style="margin:30px 0px 0px 400px">
+                
               <div class="row">
                   <div class="col-xs-6">
                       <div>
@@ -42,7 +43,7 @@
                   </div>
                   <div class="col-xs-6">
                       
-                      <p><a href="/new-customer/" class="btn btn-info btn-block">Zarejestruj się</a></p>
+                      <p><a href="Register.aspx" class="btn btn-info btn-block">Zarejestruj się</a></p>
                   </div>
               </div>
           </div>

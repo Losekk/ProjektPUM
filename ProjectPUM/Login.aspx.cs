@@ -30,11 +30,11 @@ namespace ProjectPUM
             int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
             if (count == 1)
             {
-                Response.Redirect("Register.aspx");
+                Response.Write("<script>alert('Logowanie zakończone sukcesem');</script>");
             }
             else
             {
-                Response.Write("<script>alert('login unsuccessful');</script>");
+                Response.Write("<script>alert('Logowanie niepomyślne');</script>");
 
             }
             connection.Close();

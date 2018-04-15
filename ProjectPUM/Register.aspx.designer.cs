@@ -22,12 +22,30 @@ namespace ProjectPUM {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Kontrolka CreateUserWizard1.
+        /// Kontrolka txtuser_rg.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CreateUserWizard CreateUserWizard1;
+        protected global::System.Web.UI.WebControls.TextBox txtuser_rg;
+        
+        /// <summary>
+        /// Kontrolka txtpass_rg.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtpass_rg;
+        
+        /// <summary>
+        /// Kontrolka Register_bt.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Register_bt;
     }
 }
