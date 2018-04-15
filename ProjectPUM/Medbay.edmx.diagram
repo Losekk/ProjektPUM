@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="219ce2ee028f40819bd08dfd4ede642d" Name="Diagram1" ZoomLevel="100" >
+        <EntityTypeShape EntityType="Medbay.Category" Width="1.625" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Medbay.Product" Width="1.5" PointX="3" PointY="0.5" />
+        <AssociationConnector Association="Medbay.CategoryProduct" />
+        <EntityTypeShape EntityType="Medbay.Price" Width="1.5" PointX="5.75" PointY="0.5" />
+        <AssociationConnector Association="Medbay.PriceProduct" />
+        <EntityTypeShape EntityType="Medbay.Warehouse" Width="1.5" PointX="0.75" PointY="3.75" />
+        <AssociationConnector Association="Medbay.ProductWarehouse" />
+        <EntityTypeShape EntityType="Medbay.Customer" Width="1.5" PointX="3.125" PointY="3.75" />
+        <EntityTypeShape EntityType="Medbay.Adress" Width="1.5" PointX="5.25" PointY="3" />
+        <AssociationConnector Association="Medbay.AdressCustomer" />
+        <EntityTypeShape EntityType="Medbay.User" Width="1.5" PointX="6.125" PointY="5.5" />
+        <AssociationConnector Association="Medbay.UserCustomer" />
+        <EntityTypeShape EntityType="Medbay.Cart" Width="1.5" PointX="0.625" PointY="7.25" />
+        <AssociationConnector Association="Medbay.CustomerCart" />
+        <EntityTypeShape EntityType="Medbay.CartItem" Width="1.5" PointX="2.75" PointY="7.875" />
+        <AssociationConnector Association="Medbay.CartCartItem" />
+        <AssociationConnector Association="Medbay.ProductCartItem" />
+        <EntityTypeShape EntityType="Medbay.Order" Width="1.5" PointX="5.375" PointY="7.625" />
+        <AssociationConnector Association="Medbay.CustomerOrder" />
+        <EntityTypeShape EntityType="Medbay.PaymentMethod" Width="1.5" PointX="8.375" PointY="6.875" />
+        <AssociationConnector Association="Medbay.PaymentMethodOrder" />
+        <EntityTypeShape EntityType="Medbay.TransportMethod" Width="1.5" PointX="8.5" PointY="9.625" />
+        <AssociationConnector Association="Medbay.TransportMethodOrder" />
+        <AssociationConnector Association="Medbay.PriceTransportMethod" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
