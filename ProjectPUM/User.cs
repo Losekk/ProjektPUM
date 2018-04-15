@@ -26,9 +26,5 @@ namespace ProjectPUM
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customer { get; set; }
-
-        public void chujciwdupe()
-        {
-        }
     }
 }

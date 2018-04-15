@@ -20,7 +20,12 @@ namespace ProjectPUM
             this.Cart = new HashSet<Cart>();
             this.Order = new HashSet<Order>();
         }
-    
+
+        public Customer(string firstname)
+        {
+            this.FirstName = firstname;
+        }
+
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string PhoneNumber { get; set; }
@@ -36,5 +41,6 @@ namespace ProjectPUM
         public virtual ICollection<Cart> Cart { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
+        
     }
 }

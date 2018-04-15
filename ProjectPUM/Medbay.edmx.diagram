@@ -10,7 +10,7 @@
         <AssociationConnector Association="Medbay.CategoryProduct" />
         <EntityTypeShape EntityType="Medbay.Price" Width="1.5" PointX="5.75" PointY="0.5" />
         <AssociationConnector Association="Medbay.PriceProduct" />
-        <EntityTypeShape EntityType="Medbay.Warehouse" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Medbay.Warehouse" Width="1.5" PointX="0.875" PointY="3.75" />
         <AssociationConnector Association="Medbay.ProductWarehouse" />
         <EntityTypeShape EntityType="Medbay.Customer" Width="1.5" PointX="3.125" PointY="3.75" />
         <EntityTypeShape EntityType="Medbay.Adress" Width="1.5" PointX="5.25" PointY="3" />

@@ -155,6 +155,7 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TestReg.cs" />
     <Compile Include="TransportMethod.cs">
       <DependentUpon>Medbay.tt</DependentUpon>
     </Compile>
