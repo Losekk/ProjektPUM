@@ -20,7 +20,7 @@ namespace ProjectPUM.Model
             this.Customer = new HashSet<Customer>();
         }
     
-        public Int32 Id { get; set; }
+        public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
     
