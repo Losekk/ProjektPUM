@@ -74,6 +74,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Login.aspx" />
     <Content Include="Medbay.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Medbay.Context.cs</LastGenOutput>
@@ -101,8 +102,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Registration.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Register.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adress.cs">
@@ -119,6 +122,13 @@
     </Compile>
     <Compile Include="Customer.cs">
       <DependentUpon>Medbay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Medbay.Context.cs">
       <AutoGen>True</AutoGen>
@@ -148,14 +158,13 @@
       <DependentUpon>Medbay.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.aspx.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registration.aspx.designer.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TestReg.cs" />
     <Compile Include="TransportMethod.cs">
       <DependentUpon>Medbay.tt</DependentUpon>
     </Compile>
