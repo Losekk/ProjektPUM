@@ -7,18 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectPUM
+namespace ProjectPUM.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Warehouse
+    public partial class CartItem
     {
         public int Id { get; set; }
-        public int Quantity { get; set; }
-        public int BookedQuantity { get; set; }
+        public int CartId { get; set; }
         public int ProductId { get; set; }
+        public string Nett { get; set; }
+        public string Gross { get; set; }
+        public string Tax { get; set; }
+        public string Quantity { get; set; }
     
+        public virtual Cart Cart { get; set; }
         public virtual Product Product { get; set; }
     }
 }

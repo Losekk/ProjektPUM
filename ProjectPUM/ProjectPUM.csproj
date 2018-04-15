@@ -84,29 +84,19 @@
     <Content Include="Images\Panel.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.1.1.min.js" />
+    <Content Include="Model\MedBay.edmx.sql" />
     <Content Include="Login.aspx" />
-    <Content Include="Medbay.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Medbay.Context.cs</LastGenOutput>
-      <DependentUpon>Medbay.edmx</DependentUpon>
-    </Content>
-    <Content Include="Medbay.edmx.sql" />
-    <Content Include="Medbay.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Medbay.cs</LastGenOutput>
-      <DependentUpon>Medbay.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Medbay.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Medbay.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Medbay.edmx.diagram">
-      <DependentUpon>Medbay.edmx</DependentUpon>
-    </Content>
     <Content Include="Bootstrap\bootstrap-theme.css.map" />
     <Content Include="Bootstrap\bootstrap-theme.min.css.map" />
     <Content Include="Bootstrap\bootstrap.css.map" />
     <Content Include="Bootstrap\bootstrap.min.css.map" />
+    <EntityDeploy Include="Model\MedBay.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MedBay.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\MedBay.edmx.diagram">
+      <DependentUpon>MedBay.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -116,26 +106,57 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\MedBay.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedBay.edmx</DependentUpon>
+      <LastGenOutput>MedBay.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\MedBay.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedBay.edmx</DependentUpon>
+      <LastGenOutput>MedBay.cs</LastGenOutput>
+    </Content>
     <Content Include="Register.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adress.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
+    <Compile Include="Model\Adress.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cart.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
+    <Compile Include="Model\Cart.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
     </Compile>
-    <Compile Include="CartItem.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
+    <Compile Include="Model\CartItem.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
+    <Compile Include="Model\Category.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
+    <Compile Include="Model\Customer.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Order.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PaymentMethod.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Price.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Product.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransportMethod.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Warehouse.cs">
+      <DependentUpon>MedBay.tt</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -144,33 +165,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Medbay.Context.cs">
+    <Compile Include="Model\MedBay.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Medbay.Context.tt</DependentUpon>
+      <DependentUpon>MedBay.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Medbay.cs">
+    <Compile Include="Model\MedBay.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Medbay.tt</DependentUpon>
+      <DependentUpon>MedBay.tt</DependentUpon>
     </Compile>
-    <Compile Include="Medbay.Designer.cs">
+    <Compile Include="Model\MedBay.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Medbay.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\LoginUser.cs" />
-    <Compile Include="Order.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PaymentMethod.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Price.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
+      <DependentUpon>MedBay.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -180,20 +188,13 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TransportMethod.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Warehouse.cs">
-      <DependentUpon>Medbay.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

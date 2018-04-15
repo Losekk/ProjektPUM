@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/15/2018 13:15:51
--- Generated from EDMX file: D:\Projects\ProjectPUM\ProjectPUM\Medbay.edmx
+-- Date Created: 04/15/2018 19:11:37
+-- Generated from EDMX file: C:\Users\Damian\Desktop\Projekt\ProjectPUM\Model\MedBay.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -69,7 +69,7 @@ CREATE TABLE [dbo].[CustomerSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [FirstName] nvarchar(max)  NOT NULL,
     [PhoneNumber] nvarchar(max)  NOT NULL,
-    [MarketingAgreements] nvarchar(max)  NOT NULL,
+    [MarketingAgreements] bit  NOT NULL,
     [AdressId] int  NOT NULL,
     [UserId] int  NOT NULL,
     [LastName] nvarchar(max)  NOT NULL,
@@ -265,6 +265,21 @@ ON [dbo].[ProductSet]
     ([PriceId]);
 GO
 
+-- Creating foreign key on [PriceId] in table 'TransportMethodSet'
+ALTER TABLE [dbo].[TransportMethodSet]
+ADD CONSTRAINT [FK_PriceTransportMethod]
+    FOREIGN KEY ([PriceId])
+    REFERENCES [dbo].[PriceSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PriceTransportMethod'
+CREATE INDEX [IX_FK_PriceTransportMethod]
+ON [dbo].[TransportMethodSet]
+    ([PriceId]);
+GO
+
 -- Creating foreign key on [ProductId] in table 'WarehouseSet'
 ALTER TABLE [dbo].[WarehouseSet]
 ADD CONSTRAINT [FK_ProductWarehouse]
@@ -325,6 +340,21 @@ ON [dbo].[CartSet]
     ([CustomerId]);
 GO
 
+-- Creating foreign key on [CustomerId] in table 'OrderSet'
+ALTER TABLE [dbo].[OrderSet]
+ADD CONSTRAINT [FK_CustomerOrder]
+    FOREIGN KEY ([CustomerId])
+    REFERENCES [dbo].[CustomerSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CustomerOrder'
+CREATE INDEX [IX_FK_CustomerOrder]
+ON [dbo].[OrderSet]
+    ([CustomerId]);
+GO
+
 -- Creating foreign key on [CartId] in table 'CartItemSet'
 ALTER TABLE [dbo].[CartItemSet]
 ADD CONSTRAINT [FK_CartCartItem]
@@ -355,21 +385,6 @@ ON [dbo].[CartItemSet]
     ([ProductId]);
 GO
 
--- Creating foreign key on [CustomerId] in table 'OrderSet'
-ALTER TABLE [dbo].[OrderSet]
-ADD CONSTRAINT [FK_CustomerOrder]
-    FOREIGN KEY ([CustomerId])
-    REFERENCES [dbo].[CustomerSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_CustomerOrder'
-CREATE INDEX [IX_FK_CustomerOrder]
-ON [dbo].[OrderSet]
-    ([CustomerId]);
-GO
-
 -- Creating foreign key on [PaymentMethodId] in table 'OrderSet'
 ALTER TABLE [dbo].[OrderSet]
 ADD CONSTRAINT [FK_PaymentMethodOrder]
@@ -398,21 +413,6 @@ GO
 CREATE INDEX [IX_FK_TransportMethodOrder]
 ON [dbo].[OrderSet]
     ([TransportMethodId]);
-GO
-
--- Creating foreign key on [PriceId] in table 'TransportMethodSet'
-ALTER TABLE [dbo].[TransportMethodSet]
-ADD CONSTRAINT [FK_PriceTransportMethod]
-    FOREIGN KEY ([PriceId])
-    REFERENCES [dbo].[PriceSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_PriceTransportMethod'
-CREATE INDEX [IX_FK_PriceTransportMethod]
-ON [dbo].[TransportMethodSet]
-    ([PriceId]);
 GO
 
 -- --------------------------------------------------

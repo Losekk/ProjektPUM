@@ -7,26 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectPUM
+namespace ProjectPUM.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Adress
+    public partial class Cart
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Adress()
+        public Cart()
         {
-            this.Customer = new HashSet<Customer>();
+            this.CartItem = new HashSet<CartItem>();
         }
     
         public int Id { get; set; }
-        public string Street { get; set; }
-        public string Number { get; set; }
-        public string City { get; set; }
-        public string PostalCode { get; set; }
+        public string CreatedAt { get; set; }
+        public string UpdatedAt { get; set; }
+        public int CustomerId { get; set; }
     
+        public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Customer> Customer { get; set; }
+        public virtual ICollection<CartItem> CartItem { get; set; }
     }
 }

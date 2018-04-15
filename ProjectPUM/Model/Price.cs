@@ -7,24 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectPUM
+namespace ProjectPUM.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Price
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Price()
         {
-            this.Customer = new HashSet<Customer>();
+            this.Product = new HashSet<Product>();
+            this.TransportMethod = new HashSet<TransportMethod>();
         }
     
         public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public double Nett { get; set; }
+        public double Gross { get; set; }
+        public double Tax { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Customer> Customer { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TransportMethod> TransportMethod { get; set; }
     }
 }

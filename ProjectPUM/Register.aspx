@@ -23,6 +23,7 @@
                           
                               <div class="form-group">
                                   <label for="username" class="control-label">Login</label>
+          
                                   <asp:TextBox ID="txtuser_rg" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
                                   
                                   <span class="help-block"></span>
@@ -49,6 +50,6 @@
 
     </form>
 
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </html>

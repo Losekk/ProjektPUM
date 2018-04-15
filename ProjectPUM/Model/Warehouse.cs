@@ -7,23 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectPUM
+namespace ProjectPUM.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PaymentMethod
+    public partial class Warehouse
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PaymentMethod()
-        {
-            this.Order = new HashSet<Order>();
-        }
-    
         public int Id { get; set; }
-        public string Name { get; set; }
+        public int Quantity { get; set; }
+        public int BookedQuantity { get; set; }
+        public int ProductId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

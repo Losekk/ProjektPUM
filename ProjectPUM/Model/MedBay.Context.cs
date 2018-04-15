@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectPUM
+namespace ProjectPUM.Model
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MedbayContainer : DbContext
+    public partial class MedBayEntities : DbContext
     {
-        public MedbayContainer()
-            : base("name=MedbayContainer")
+        public MedBayEntities()
+            : base("name=MedBayEntities")
         {
         }
     
