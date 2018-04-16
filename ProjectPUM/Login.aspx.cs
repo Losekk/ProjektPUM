@@ -19,10 +19,10 @@ namespace ProjectPUM
         void LogIn()
         {
             MedBayEntities db = new MedBayEntities();
-            var user = db.UserSet.FirstOrDefault(x => x.Login == txtuser.Text);
+            var user = db.UserSet.FirstOrDefault(x => x.Login == txtLogin_register.Text);
             if (user != null)
             {
-                if (user.Password == txtpass.Text)
+                if (user.Password == txtPassword_register.Text)
                 {
                     Response.Write("<script>alert('Logowanie zakończone sukcesem');</script>");
                 }

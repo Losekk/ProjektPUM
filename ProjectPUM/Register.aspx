@@ -16,24 +16,29 @@
            </div>
         <div>
             
-			<div style="position: absolute; z-index: 1" id="layer2" ><div class="modal-body" style="margin:30px 0px 0px 400px; top: 0px; left: 0px; width: 252px;">
+			<div class="modal-body" style="margin:30px 0px 0px 400px; top: -26px; left: -39px; width: 260px; height: 313px;">
               
                   <h3>Zarejestruj się</h3>
                       <div>
                           
                               <div class="form-group">
-                                  <label for="username" class="control-label">Login</label>
+                                  <label for="login" class="control-label">Login</label>
           
-                                  <asp:TextBox ID="txtuser_rg" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
+                                  <asp:TextBox ID="txtLogin_register" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
                                   
-                                  <span class="help-block"></span>
-                              </div>
-                              <div class="form-group">
+                                  
                                   <label for="password" class="control-label">Hasło</label>
-                                  <asp:TextBox ID="txtpass_rg" class="form-control" placeholder="Hasło" TextMode="Password" runat="server"></asp:TextBox>
+          
+                                  <asp:TextBox ID="txtPassword_register" class="form-control" placeholder="Hasło" TextMode="Password" runat="server"></asp:TextBox>
                                   
-                                  <span class="help-block"></span>
+                                  
+                             
+                                  <label for="email" class="control-label">Email</label>
+                                  <asp:TextBox ID="txtEmail_register" class="form-control" placeholder="Email"  runat="server"></asp:TextBox>
+                                  
+                                  
                               </div>
+
                         
 
                           <asp:Button ID="Register_bt" class="btn btn-success btn-block" runat="server" Text="Zarejestruj się" OnClick="Register_bt_Click"/>
@@ -45,9 +50,41 @@
                   
               
           </div>
-      </div>
-  </div> 
+            
+            
+            <div class="modal-body" style="margin:76px 0px 0px 30px; top: -445px; right: -652px; width: 260px; height: 313px;">
+              
+                <h3>&nbsp;</h3>
+                <div>
+                          
+                    <div class="form-group">
+                        <label for="firstname" class="control-label">Imię</label>
+          
+                        <asp:TextBox ID="txtFirstName_register" class="form-control" placeholder="Imię" runat="server"></asp:TextBox>
+                                  
+                                  
+                        <label for="lastname" class="control-label">Nazwisko</label>
+          
+                        <asp:TextBox ID="txtLastName_register" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
+                                  
+                                  
+                             
+                       
+                                
+                                  
+                    </div>
+                    <asp:CheckBox style="text-align: center; margin-top: 100px;" ID="MarketingAgreements" runat="server" Text="Zgadzam się na przetwarzanie danych osobowych w celach marketingowych"  />
+                         
+                        
 
+                </div>
+                  
+                  
+              
+            </div>
+      </div>
+  </> 
+          
     </form>
 
 <script src="../js/jquery-3.1.1.min.js"></script>

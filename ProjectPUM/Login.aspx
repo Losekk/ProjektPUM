@@ -9,7 +9,7 @@
     <link href="Bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="Bootstrap/Style.css" rel="stylesheet" />
 </head>
-<body style="background-image:url('Images/background.png')">
+<body style="background-image:url('ProjectPUM/Images/background.png')">
     <form id="form1" runat="server">
         <div class="panel-img">
             <img src="Images/Panel.png" />
@@ -23,13 +23,13 @@
                           
                               <div class="form-group">
                                   <label for="username" class="control-label">Login</label>
-                                  <asp:TextBox ID="txtuser" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
+                                  <asp:TextBox ID="txtLogin_register" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
                                   
                                   <span class="help-block"></span>
                               </div>
                               <div class="form-group">
                                   <label for="password" class="control-label">Hasło</label>
-                                  <asp:TextBox ID="txtpass" class="form-control" placeholder="Hasło" TextMode="Password" runat="server"></asp:TextBox>
+                                  <asp:TextBox ID="txtPassword_register" class="form-control" placeholder="Hasło" TextMode="Password" runat="server"></asp:TextBox>
                                   
                                   <span class="help-block"></span>
                               </div>
