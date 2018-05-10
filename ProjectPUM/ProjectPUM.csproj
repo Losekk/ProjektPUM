@@ -50,10 +50,44 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -65,6 +99,21 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\..\GarageManager - 7 - Source\Bin\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -74,28 +123,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bootstrap\bootstrap-theme.css" />
-    <Content Include="Bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Bootstrap\bootstrap.css" />
-    <Content Include="Bootstrap\bootstrap.min.css" />
-    <Content Include="Bootstrap\Style.css" />
-    <Content Include="Images\background.jpg" />
-    <Content Include="Images\background.png" />
-    <Content Include="Images\Panel.png" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery-3.1.1.min.js" />
-    <Content Include="Model\MedBay.edmx.sql" />
-    <Content Include="Login.aspx" />
-    <Content Include="Bootstrap\bootstrap-theme.css.map" />
-    <Content Include="Bootstrap\bootstrap-theme.min.css.map" />
-    <Content Include="Bootstrap\bootstrap.css.map" />
-    <Content Include="Bootstrap\bootstrap.min.css.map" />
-    <EntityDeploy Include="Model\MedBay.edmx">
+    <Content Include="Database\MedShop.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedShop.edmx</DependentUpon>
+      <LastGenOutput>MedShop.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\MedShop.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedShop.edmx</DependentUpon>
+      <LastGenOutput>MedShop.cs</LastGenOutput>
+    </Content>
+    <Content Include="Images\header.jpg" />
+    <Content Include="Images\Products\podnosnik.jpg" />
+    <Content Include="Images\Products\wozek.jpg" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="MasterPage.Master" />
+    <EntityDeploy Include="Database\MedShop.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MedBay.Designer.cs</LastGenOutput>
+      <LastGenOutput>MedShop.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model\MedBay.edmx.diagram">
-      <DependentUpon>MedBay.edmx</DependentUpon>
+    <Content Include="Database\MedShop.edmx.diagram">
+      <DependentUpon>MedShop.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -106,95 +154,85 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\MedBay.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MedBay.edmx</DependentUpon>
-      <LastGenOutput>MedBay.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\MedBay.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MedBay.edmx</DependentUpon>
-      <LastGenOutput>MedBay.cs</LastGenOutput>
-    </Content>
-    <Content Include="Register.aspx" />
+    <Content Include="Pages\Product.aspx" />
+    <Content Include="Pages\Register.aspx" />
+    <Content Include="Styles\StyleSheet.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Adress.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\Cart.cs">
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Cart.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\MedShop.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedShop.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CartItem.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\MedShop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Category.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\MedShop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedShop.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\Customer.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\Product.cs">
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Order.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\ProductType.cs">
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PaymentMethod.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Price.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\sp_helpdiagrams_Result.cs">
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Product.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="Database\UserDetail.cs">
+      <DependentUpon>MedShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TransportMethod.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Model\User.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="Model\Warehouse.cs">
-      <DependentUpon>MedBay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Models\CartModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\ProductTypeModel.cs" />
+    <Compile Include="Models\UserDetailModel.cs" />
+    <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Model\MedBay.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedBay.Context.tt</DependentUpon>
+    <Compile Include="Pages\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Model\MedBay.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedBay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MedBay.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedBay.edmx</DependentUpon>
+    <Compile Include="Pages\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.aspx.cs">
+    <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Register.aspx.designer.cs">
+    <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
