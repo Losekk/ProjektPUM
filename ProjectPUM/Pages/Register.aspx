@@ -1,92 +1,38 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="ProjectPUM.Register" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="ProjectPUM.Register" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <h4>Register a new user</h4>
+    <hr />
+    <p>
+        <asp:Literal runat="server" ID="litStatusMessage" />
+    </p>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <title>Zarejestruj się</title>
-    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="Bootstrap/Style.css" rel="stylesheet" />
-</head>
-<body style="background-image:url('Images/background.png')">
-    <form id="form1" runat="server">
-        <div class="panel-img">
-            <img src="Images/Panel.png" />
-           </div>
-        <div>
-            
-			<div class="modal-body" style="margin:30px 0px 0px 400px; top: -26px; left: -39px; width: 260px; height: 313px;">
-              
-                  <h3>Zarejestruj się</h3>
-                      <div>
-                          
-                              <div class="form-group">
-                                  <label for="login" class="control-label">Login</label>
-          
-                                  <asp:TextBox ID="txtLogin_register" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
-                                  
-                                  
-                                  <label for="password" class="control-label">Hasło</label>
-          
-                                  <asp:TextBox ID="txtPassword_register" class="form-control" placeholder="Hasło" TextMode="Password" runat="server"></asp:TextBox>
-                                  
-                                  
-                             
-                                  <label for="email" class="control-label">Email</label>
-                                  <asp:TextBox ID="txtEmail_register" class="form-control" placeholder="Email"  runat="server"></asp:TextBox>
-                                  
-                                  
-                              </div>
+    User name:<br />
+    <asp:TextBox runat="server" ID="txtUserName" CssClass="inputs" /><br />
 
-                        
+    Password:
+    <br />
+    <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="inputs" /><br />
 
-                          <asp:Button ID="Register_bt" class="btn btn-success btn-block" runat="server" Text="Zarejestruj się" OnClick="Register_bt_Click"/>
-                              
-                             
-                         
-                      </div>
-                  
-                  
-              
-          </div>
-            
-            
-            <div class="modal-body" style="margin:76px 0px 0px 30px; top: -445px; right: -652px; width: 260px; height: 313px;">
-              
-                <h3>&nbsp;</h3>
-                <div>
-                          
-                    <div class="form-group">
-                        <label for="firstname" class="control-label">Imię</label>
-          
-                        <asp:TextBox ID="txtFirstName_register" class="form-control" placeholder="Imię" runat="server"></asp:TextBox>
-                                  
-                                  
-                        <label for="lastname" class="control-label">Nazwisko</label>
-          
-                        <asp:TextBox ID="txtLastName_register" class="form-control" placeholder="Login" runat="server"></asp:TextBox>
-                                  
-                                  
-                             
-                       
-                                
-                                  
-                    </div>
-                    <asp:CheckBox style="text-align: center; margin-top: 100px;" ID="MarketingAgreements" runat="server" Text="Zgadzam się na przetwarzanie danych osobowych w celach marketingowych"  />
-                         
-                        
+    Confirm password:
+    <br />
+    <asp:TextBox runat="server" ID="txtConfirmPassword" TextMode="Password" CssClass="inputs" /><br />
+    
+    First Name:<br />
+    <asp:TextBox runat="server" ID="txtFirstName" CssClass="inputs" /><br />
+    
+    Last Name:<br />
+    <asp:TextBox runat="server" ID="txtLastName" CssClass="inputs" /><br />
+    
+    Address:<br />
+    <asp:TextBox runat="server" ID="txtAddress" CssClass="inputs" /><br />
+    
+    Postal Code:<br />
+    <asp:TextBox runat="server" ID="txtPostalCode" CssClass="inputs" /><br />
 
-                </div>
-                  
-                  
-              
-            </div>
-      </div>
-  </> 
-          
-    </form>
-
-<script src="../js/jquery-3.1.1.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-</html>
+    <p>
+        <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="button" Width="150px" />
+    </p>
+</asp:Content>

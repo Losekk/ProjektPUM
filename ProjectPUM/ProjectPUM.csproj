@@ -136,6 +136,7 @@
     <Content Include="Images\header.jpg" />
     <Content Include="Images\Products\podnosnik.jpg" />
     <Content Include="Images\Products\wozek.jpg" />
+    <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="MasterPage.Master" />
     <EntityDeploy Include="Database\MedShop.edmx">
@@ -156,6 +157,7 @@
   <ItemGroup>
     <Content Include="Pages\Product.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Styles\StyleSheet.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -206,6 +208,13 @@
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\ProductTypeModel.cs" />
     <Compile Include="Models\UserDetailModel.cs" />
+    <Compile Include="Pages\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +228,13 @@
     </Compile>
     <Compile Include="Pages\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Register.aspx.cs">

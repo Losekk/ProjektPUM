@@ -10,7 +10,7 @@ namespace ProjectPUM.Models
     {
         public UserDetail GetUserInformation(string guId)
         {
-            MedShopEntities db = new MedShopEntities);
+            MedShopEntities db = new MedShopEntities();
             var info = (from x in db.UserDetails
                         where x.Guid == guId
                         select x).FirstOrDefault();
