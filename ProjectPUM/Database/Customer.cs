@@ -12,18 +12,28 @@ namespace ProjectPUM.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductType
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ProductType()
+        public Customer()
         {
-            this.Products = new HashSet<Product>();
+            this.Cart = new HashSet<Cart>();
+            this.Order = new HashSet<Order>();
         }
     
-        public int ID { get; set; }
-        public string Name { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public int AdressID { get; set; }
+        public int UserID { get; set; }
+        public string Email { get; set; }
     
+        public virtual Adress Adress { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Cart> Cart { get; set; }
+        public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

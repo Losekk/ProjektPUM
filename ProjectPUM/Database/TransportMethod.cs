@@ -12,24 +12,19 @@ namespace ProjectPUM.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class TransportMethod
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public TransportMethod()
         {
-            this.Cart = new HashSet<Cart>();
+            this.Order = new HashSet<Order>();
         }
     
-        public int ProductId { get; set; }
-        public string Product_Name { get; set; }
-        public string Product_Description { get; set; }
-        public string PictureFileName { get; set; }
-        public int CategoryID { get; set; }
-        public int PriceID { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cart> Cart { get; set; }
-        public virtual Category Category { get; set; }
-        public virtual Price Price { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

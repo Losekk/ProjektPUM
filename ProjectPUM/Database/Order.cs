@@ -12,15 +12,23 @@ namespace ProjectPUM.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Cart
+    public partial class Order
     {
         public int Id { get; set; }
-        public int ProductID { get; set; }
-        public int Cart_Price { get; set; }
-        public int Quantity { get; set; }
         public int CustomerID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhontNumber { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipStreet { get; set; }
+        public string ShipNumber { get; set; }
+        public string ShipPostalCode { get; set; }
+        public int PaymentMethodID { get; set; }
+        public int TransportMethodID { get; set; }
+        public int Order_Price { get; set; }
     
         public virtual Customer Customer { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual PaymentMethod PaymentMethod { get; set; }
+        public virtual TransportMethod TransportMethod { get; set; }
     }
 }
