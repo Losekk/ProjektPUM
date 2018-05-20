@@ -26,6 +26,7 @@ namespace ProjectPUM.Database
         public string PictureFileName { get; set; }
         public int CategoryID { get; set; }
         public int Price { get; set; }
+        public int Quantity { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cart> Cart { get; set; }

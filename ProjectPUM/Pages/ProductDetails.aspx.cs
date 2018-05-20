@@ -19,6 +19,11 @@ namespace ProjectPUM.Pages
 
         protected void buttonAdd_Click(object sender, EventArgs e)
         {
+           AddToCart();
+        }
+
+        private void AddToCart()
+        {
             if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
             {
                 string userID = Context.User.Identity.GetUserId();
@@ -34,7 +39,7 @@ namespace ProjectPUM.Pages
                         CustomerID = userID
 
                     };
-                    
+
                     CartService cartService = new CartService();
                     labelResult.Text = cartService.InsertCart(cart);
                 }
