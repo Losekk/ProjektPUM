@@ -31,9 +31,7 @@ namespace ProjectPUM.Database
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
-        public virtual DbSet<Price> Price { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<TransportMethod> TransportMethod { get; set; }
-        public virtual DbSet<User> User { get; set; }
     }
 }

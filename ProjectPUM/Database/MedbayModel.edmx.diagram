@@ -5,25 +5,20 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4cc8b6c354654cb7bd036c098a852034" Name="Diagram1">
-        <EntityTypeShape EntityType="db_MedbayModel.Adress" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="db_MedbayModel.Cart" Width="1.5" PointX="5.25" PointY="3.625" />
-        <EntityTypeShape EntityType="db_MedbayModel.Category" Width="1.5" PointX="0.75" PointY="11.125" />
-        <EntityTypeShape EntityType="db_MedbayModel.Customer" Width="1.5" PointX="3" PointY="3.25" />
-        <EntityTypeShape EntityType="db_MedbayModel.Order" Width="1.5" PointX="8.25" PointY="2.875" />
-        <EntityTypeShape EntityType="db_MedbayModel.PaymentMethod" Width="1.5" PointX="6" PointY="7.25" />
-        <EntityTypeShape EntityType="db_MedbayModel.Price" Width="1.5" PointX="0.75" PointY="8.75" />
-        <EntityTypeShape EntityType="db_MedbayModel.Product" Width="1.5" PointX="3" PointY="9.5" />
-        <EntityTypeShape EntityType="db_MedbayModel.TransportMethod" Width="1.5" PointX="6" PointY="0.75" />
-        <EntityTypeShape EntityType="db_MedbayModel.User" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="db_MedbayModel.Adress" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="db_MedbayModel.Cart" Width="1.5" PointX="10.25" PointY="6.25" />
+        <EntityTypeShape EntityType="db_MedbayModel.Category" Width="1.5" PointX="5.75" PointY="6.375" />
+        <EntityTypeShape EntityType="db_MedbayModel.Customer" Width="1.5" PointX="3" PointY="1.625" />
+        <EntityTypeShape EntityType="db_MedbayModel.Order" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="db_MedbayModel.PaymentMethod" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="db_MedbayModel.Products" Width="1.5" PointX="8" PointY="6" />
+        <EntityTypeShape EntityType="db_MedbayModel.TransportMethod" Width="1.5" PointX="3" PointY="9.25" />
         <AssociationConnector Association="db_MedbayModel.FK_CUSTOMER_ADDRESS" />
-        <AssociationConnector Association="db_MedbayModel.FK_Cart_Customer" />
-        <AssociationConnector Association="db_MedbayModel.FK_CART_PRODUCT" />
-        <AssociationConnector Association="db_MedbayModel.FK_PRODUCT_CATEGORY" />
-        <AssociationConnector Association="db_MedbayModel.FK_CUSTOMER_USER" />
+        <AssociationConnector Association="db_MedbayModel.FK_Cart_Products" />
+        <AssociationConnector Association="db_MedbayModel.FK_Products_Category" />
         <AssociationConnector Association="db_MedbayModel.FK_ORDER_CUSTOMER" />
         <AssociationConnector Association="db_MedbayModel.FK_ORDER_PAYMENT_METHOD" />
         <AssociationConnector Association="db_MedbayModel.FK_ORDER_TRANSPORT_METHOD" />
-        <AssociationConnector Association="db_MedbayModel.FK_Product_Price" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

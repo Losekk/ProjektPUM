@@ -12,27 +12,28 @@ namespace ProjectPUM.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ProductModel model = new ProductModel();
-            List<Database.Product> products = model.GetAllProducts();
-
+            ProductSevice model = new ProductSevice();
+            List<Database.Products> products = model.GetAllProducts();
+            
             if (products != null)
             {
-                foreach (Database.Product product in products)
+                foreach (Database.Products product in products)
                 {
                     Panel productPanel = new Panel();
                     ImageButton imageButton = new ImageButton
                     {
-                        ImageUrl = "~/Images/Products/" + product.Image,
+                        ImageUrl = "~/Images/Products/" + product.PictureFileName,
                         CssClass = "productImage",
-                        PostBackUrl = string.Format("~/Pages/Product.aspx?id={0}", product.ID)
+                        PostBackUrl = string.Format("~/Pages/ProductDetails.aspx?id={0}", product.ProductId)
                     };
                     Label lblName = new Label
                     {
-                        Text = product.Name,
+                        Text = product.Product_Name,
                         CssClass = "productName"
                     };
                     Label lblPrice = new Label
                     {
+                        
                         Text = "£ " + product.Price,
                         CssClass = "productPrice"
                     };

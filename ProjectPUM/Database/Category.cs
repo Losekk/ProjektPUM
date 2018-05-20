@@ -17,7 +17,7 @@ namespace ProjectPUM.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            this.Product = new HashSet<Product>();
+            this.Products = new HashSet<Products>();
         }
     
         public int Id { get; set; }
@@ -25,6 +25,6 @@ namespace ProjectPUM.Database
         public string PictureFileName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<Products> Products { get; set; }
     }
 }

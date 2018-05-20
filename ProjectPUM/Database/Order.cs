@@ -15,7 +15,7 @@ namespace ProjectPUM.Database
     public partial class Order
     {
         public int Id { get; set; }
-        public int CustomerID { get; set; }
+        public string CustomerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhontNumber { get; set; }

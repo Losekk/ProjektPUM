@@ -10,69 +10,78 @@
 namespace ProjectPUM.Pages {
     
     
-    public partial class ShoppingCart {
+    public partial class ProductDetails {
         
         /// <summary>
-        /// pnlShoppingCart control.
+        /// productImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlShoppingCart;
+        protected global::System.Web.UI.WebControls.Image productImage;
         
         /// <summary>
-        /// litTotal control.
+        /// labelTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litTotal;
+        protected global::System.Web.UI.WebControls.Label labelTitle;
         
         /// <summary>
-        /// litVat control.
+        /// labelDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litVat;
+        protected global::System.Web.UI.WebControls.Label labelDescription;
         
         /// <summary>
-        /// litTotalAmount control.
+        /// labelPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litTotalAmount;
+        protected global::System.Web.UI.WebControls.Label labelPrice;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// quantityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.TextBox quantityTextBox;
         
         /// <summary>
-        /// btnCheckout control.
+        /// buttonAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheckout;
+        protected global::System.Web.UI.WebControls.Button buttonAdd;
         
         /// <summary>
-        /// litPaypal control.
+        /// labelResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton litPaypal;
+        protected global::System.Web.UI.WebControls.Label labelResult;
+        
+        /// <summary>
+        /// labelAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelAvailable;
     }
 }

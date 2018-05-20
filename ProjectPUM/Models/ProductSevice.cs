@@ -10,13 +10,13 @@ namespace ProjectPUM.Models
 {
     public class ProductSevice
     {
-        public string InsertProduct(Product product)
+        public string InsertProduct(Products product)
         {
             try
             {
 
                 db_MedbayEntities context = new db_MedbayEntities();
-                context.Product.Add(product);
+                context.Products.Add(product);
                 context.SaveChanges();
 
                 return product.Product_Name + " was succesfully inserted";
@@ -27,16 +27,16 @@ namespace ProjectPUM.Models
             }
         }
 
-        public string UpdateProduct(int id, Product product)
+        public string UpdateProduct(int id, Products product)
         {
             try
             {
                 db_MedbayEntities context = new db_MedbayEntities();
 
-                Product oldProduct = context.Product.Find(id);
+                Products oldProduct = context.Products.Find(id);
 
                 oldProduct.Product_Name = product.Product_Name;
-                oldProduct.PriceID = product.PriceID;
+                oldProduct.Price = product.Price;
                 oldProduct.Product_Description = product.Product_Description;
                 oldProduct.PictureFileName = product.PictureFileName;
                 oldProduct.CategoryID = product.CategoryID;
@@ -57,10 +57,10 @@ namespace ProjectPUM.Models
             try
             {
                 db_MedbayEntities context = new db_MedbayEntities();
-                Product deleteProduct = context.Product.Find(id);
+                Products deleteProduct = context.Products.Find(id);
 
-                context.Product.Attach(deleteProduct);
-                context.Product.Remove(deleteProduct);
+                context.Products.Attach(deleteProduct);
+                context.Products.Remove(deleteProduct);
                 context.SaveChanges();
 
                 return deleteProduct.Product_Name + "was succesfully deleted";
@@ -71,13 +71,13 @@ namespace ProjectPUM.Models
             }
         }
 
-        public Product GetProduct(int id)
+        public Products GetProduct(int id)
         {
             try
             {
                 using (db_MedbayEntities context = new db_MedbayEntities())
                 {
-                    Product product = context.Product.Find(id);
+                    Products product = context.Products.Find(id);
                     return product;
                 }
             }
@@ -87,14 +87,14 @@ namespace ProjectPUM.Models
             }
         }
 
-        public List<Product> GetAllProducts()
+        public List<Products> GetAllProducts()
         {
             try
             {
                 using (db_MedbayEntities context = new db_MedbayEntities())
                 {
-                    List<Product> products = (from x in context.Product
-                        select x).ToList();
+                    List<Products> products = (from x in context.Products
+                                               select x).ToList();
                     return products;
                 }
             }
@@ -104,14 +104,14 @@ namespace ProjectPUM.Models
             }
 
         }
-        public List<Product> GetProductsByCategory(int categoryId)
+        public List<Products> GetProductsByCategory(int categoryId)
         {
             try
             {
                 using (db_MedbayEntities context = new db_MedbayEntities())
                 {
-                    List<Product> products = (from x in context.Product
-                        where x.CategoryID == categoryId
+                    List<Products> products = (from x in context.Products
+                                               where x.CategoryID == categoryId
                         select x).ToList();
                     return products;
                 }

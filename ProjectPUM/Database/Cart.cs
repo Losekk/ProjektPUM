@@ -16,11 +16,9 @@ namespace ProjectPUM.Database
     {
         public int Id { get; set; }
         public int ProductID { get; set; }
-        public int Cart_Price { get; set; }
         public int Quantity { get; set; }
-        public int CustomerID { get; set; }
+        public string CustomerID { get; set; }
     
-        public virtual Customer Customer { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Products Products { get; set; }
     }
 }
