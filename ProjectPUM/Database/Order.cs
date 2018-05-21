@@ -15,7 +15,7 @@ namespace ProjectPUM.Database
     public partial class Order
     {
         public int Id { get; set; }
-        public string CustomerID { get; set; }
+        public int CustomerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhontNumber { get; set; }
@@ -27,8 +27,8 @@ namespace ProjectPUM.Database
         public int TransportMethodID { get; set; }
         public int Order_Price { get; set; }
     
-        public virtual Customer Customer { get; set; }
         public virtual PaymentMethod PaymentMethod { get; set; }
         public virtual TransportMethod TransportMethod { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

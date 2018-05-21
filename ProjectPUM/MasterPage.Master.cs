@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ProjectPUM.Models;
 using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 
 namespace ProjectPUM
 {
@@ -38,7 +39,9 @@ namespace ProjectPUM
 
         protected void lnkLogOut_Click(object sender, EventArgs e)
         {
-
+            IAuthenticationManager authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            authenticationManager.SignOut();
+            Response.Redirect("~/Pages/Index.aspx");
         }
     }
 }

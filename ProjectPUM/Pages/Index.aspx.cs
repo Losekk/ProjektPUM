@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,48 +15,8 @@ namespace ProjectPUM.Pages
     public partial class Index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            //ProductSevice model = new ProductSevice();
-            //List<Database.Products> products = model.GetAllProducts();
-
-            //if (products != null)
-            //{
-            //    foreach (Database.Products product in products)
-            //    {
-            //        Panel productPanel = new Panel();
-            //        ImageButton imageButton = new ImageButton
-            //        {
-            //            ImageUrl = "~/Images/Products/" + product.PictureFileName,
-            //            CssClass = "productImage",
-            //            PostBackUrl = string.Format("~/Pages/ProductDetails.aspx?id={0}", product.ProductId)
-            //        };
-            //        Label lblName = new Label
-            //        {
-            //            Text = product.Product_Name,
-            //            CssClass = "productName"
-            //        };
-            //        Label lblPrice = new Label
-            //        {
-
-            //            Text = "£ " + product.Price,
-            //            CssClass = "productPrice"
-            //        };
-
-            //        productPanel.Controls.Add(imageButton);
-            //        productPanel.Controls.Add(new Literal {Text = "<br/>"});
-            //        productPanel.Controls.Add(lblName);
-            //        productPanel.Controls.Add(new Literal {Text = "<br/>"});
-            //        productPanel.Controls.Add(lblPrice);
-
-            //        //Add dynamic controls to static control
-            //        pnlProducts.Controls.Add(productPanel);
-            //    }
-            //}
-            //else
-            //    pnlProducts.Controls.Add(new Literal {Text = "No products found!"});
-           
-            CreateProductPanel();
-            
+        {     
+          CreateProductPanel();    
         }
 
         public void CreateProductPanel()
@@ -83,25 +44,25 @@ namespace ProjectPUM.Pages
                         PostBackUrl = string.Format("~/Pages/ProductDetails.aspx?id={0}", product.ProductId)
 
                     };
+                 
+
+                    LinkButton addCartButton = new LinkButton
+                    {
+                        Text = "Kup teraz!",
+                        CssClass = "button",
+                        PostBackUrl = string.Format("~/Pages/ProductDetails.aspx?id={0}", product.ProductId)
+
+                    };
+                    addCartButton.Click += new EventHandler(this.AddToCart);
+
+
                     Label added = new Label()
                     {
                         Text = "Dodano do koszyka!",
                         Visible = false
-
                     };
+                    
 
-                    LinkButton addCartButton = new LinkButton()
-                    {
-                        Text = "Kup teraz!",
-                        CssClass = "button",
-                      //  PostBackUrl = "~/Pages/Login.aspx",
-                        OnClientClick = AddToCart(added)
-                        
-                       
-                       
-                    };
-
-                 
 
 
 
@@ -126,9 +87,9 @@ namespace ProjectPUM.Pages
 
                     cell1_1.Controls.Add(imageButton);
                     cell1_5.Controls.Add(detailButton);
-                 
-                    cell1_6.Controls.Add(addCartButton);
                     cell2_6.Controls.Add(added);
+                    cell1_6.Controls.Add(addCartButton);
+                  
 
                     row1.Cells.Add(cell1_1);
                     row1.Cells.Add(cell1_2);
@@ -156,8 +117,10 @@ namespace ProjectPUM.Pages
 
 
 
-        private string AddToCart(Label added)
+        private void AddToCart(Object sender,
+            EventArgs e)
         {
+            Response.Redirect("~/Pages/ProductDetails.aspx?id={0}");
             if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
             {
                 string userID = Context.User.Identity.GetUserId();
@@ -175,17 +138,17 @@ namespace ProjectPUM.Pages
                     };
 
                     CartService cartService = new CartService();
-                    return cartService.InsertCart(cart);
+                   
+                    cartService.InsertCart(cart);
+                    
+                    Response.Write("<script>alert('Dodano do koszyka.');</script>");
                 }
                 else
                 {
-                    return "Aby dokonać zakupu zaloguj się!";
+                    Response.Write("<script>alert('Aby dokonać zakupu zaloguj się!');</script>");
                 }
             }
-            else
-            {
-                return "";
-            }
+          
         }
     }
 }
