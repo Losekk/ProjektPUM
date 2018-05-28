@@ -19,8 +19,8 @@
             </td>
             <td style="margin-left: 10px">
                 <asp:Label ID="labelPrice" runat="server" CssClass="detailsPrice"></asp:Label><br />
-                Quantity:<asp:TextBox ID="quantityTextBox" runat="server"></asp:TextBox><br />
-                <asp:Button ID="buttonAdd" runat="server" CssClass="button" OnClick="buttonAdd_Click" Text="Add Product" />
+                Ilość:<asp:TextBox ID="quantityTextBox" runat="server"></asp:TextBox><br />
+                <asp:Button ID="buttonAdd" runat="server" CssClass="button" OnClick="buttonAdd_Click" Text="Dodaj produkt" />
                 <br />
                 
                 <asp:Label ID="labelResult" runat="server"></asp:Label>
@@ -31,7 +31,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;<asp:Label ID="labelAvailable" runat="server" CssClass="productPrice">Available!</asp:Label>
+            <td class="auto-style2">&nbsp;<asp:Label ID="labelAvailable" runat="server" CssClass="productPrice">Dostępny!</asp:Label>
             </td>
         </tr>
     </table>

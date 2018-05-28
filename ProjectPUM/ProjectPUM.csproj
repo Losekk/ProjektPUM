@@ -192,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\ProductDetails.aspx" />
+    <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Styles\StyleSheet.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="Pages\ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Account\Startup1.cs">

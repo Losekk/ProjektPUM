@@ -18,16 +18,20 @@
                 <div id="navigation">
                     <ul id="nav">
                         <li>
-                            <asp:HyperLink runat="server" NavigateUrl="~/Pages/Index.aspx">Webshop</asp:HyperLink></li>
-                        
+                            <asp:HyperLink runat="server" NavigateUrl="~/Pages/Index.aspx">Medbay</asp:HyperLink></li>
                         <li style="float: right">
-                            <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Pages/Account/Register.aspx">Register</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/ShoppingCart.aspx">Koszyk</asp:HyperLink>
+                            
+                        </li>
+                        <li style="float: right">
+                            <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Pages/Account/Register.aspx">Rejestracja</asp:HyperLink>
                             <asp:HyperLink ID="litStatus" runat="server" NavigateUrl="~/Pages/ShoppingCart.aspx"></asp:HyperLink>
                         </li>
                         <li style="float: right">
-                            <asp:HyperLink ID="LnkLogIn" runat="server" NavigateUrl="~/Pages/Account/Login.aspx">Log in</asp:HyperLink>
-                            <asp:LinkButton ID="btnLogOut" runat="server" Text="Log out" OnClick="lnkLogOut_Click" />
+                            <asp:HyperLink ID="LnkLogIn" runat="server" NavigateUrl="~/Pages/Account/Login.aspx">Logowanie</asp:HyperLink>
+                            <asp:LinkButton ID="btnLogOut" runat="server" Text="Wyloguj" OnClick="lnkLogOut_Click" />
                         </li>
+
                     </ul>
                 </div>
                 <div id="content">

@@ -25,18 +25,18 @@ namespace ProjectPUM.Database
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Adress> Adress { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
+        public virtual DbSet<TransportMethod> TransportMethod { get; set; }
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Cart> Cart { get; set; }
-        public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<Order> Order { get; set; }
-        public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
         public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<TransportMethod> TransportMethod { get; set; }
-        public virtual DbSet<Adress> Adress { get; set; }
-        public virtual DbSet<Customer> Customer { get; set; }
     }
 }

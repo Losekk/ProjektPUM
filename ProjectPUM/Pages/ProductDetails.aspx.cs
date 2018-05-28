@@ -37,11 +37,13 @@ namespace ProjectPUM.Pages
                         ProductID = id,
                         Quantity = quantity,
                         CustomerID = userID
-
+                        
+                        
                     };
 
                     CartService cartService = new CartService();
                     labelResult.Text = cartService.InsertCart(cart);
+                    Response.Redirect("~/Pages/ShoppingCart.aspx?id={0}" + cart.Id);
                 }
                 else
                 {
